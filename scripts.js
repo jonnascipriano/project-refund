@@ -1,0 +1,36 @@
+// Seleciona os elementos do formulário
+const form = document.querySelector('form');
+const amount = document.getElementById('amount');
+const expense = document.getElementById('expense');
+const category = document.getElementById('category');
+
+// Captura o evento de input para formatar o valor
+amount.oninput = () =>{
+    // Remove todos os caracteres que não são dígitos
+    // \D corresponde a qualquer caractere que não seja um dígito
+    // g é a flag de global, que indica que a substituição deve ser feita em toda a string
+    let value = amount.value.replace(/\D/g,"");
+
+    // Transformar o valor em centavos.
+    value = Number(value)/100;
+
+    // Atualiza o valor do input
+    amount.value = formatCurrencyBRL(value);
+}
+
+function formatCurrencyBRL(value){
+    // Formata o valor no padrão BRL (R$)
+    value = value.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    })
+
+    // Retorna o valor formatado
+    return value;
+}
+
+// Captura o evento de submit do formulário
+// Não recarrega a página ao enviar o formulário
+form.onsubmit = (event) =>{
+    event.preventDefault();
+}
