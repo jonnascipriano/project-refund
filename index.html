@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Link para fontes definidas -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,27 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Link para CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Título da página -->
     <title>Refund</title>
-
 </head>
+
 <body>
-    
     <main>
         <!-- Logotipo -->
-        <img src="./img/logo.svg" alt="Convert logo" class="logo"/>
+        <img src="./img/logo.svg" alt="Convert logo" class="logo" />
 
         <section>
             <form>
                 <h1>Solicitação de reembolso</h1>
-                <p>Informe os dados da despesa para solicitar reembolso. A despesa será analisada e reembolsada em até 30 dias</p>
+                <p>
+                    Informe os dados da despesa para solicitar reembolso. A despesa será
+                    analisada e reembolsada em até 30 dias
+                </p>
 
                 <!-- Required serve para obrigar o usuário a escrever/escolher uma opção -->
                 <fieldset>
                     <legend>Nome da empresa</legend>
-                    <input type="text" id="expense" name="expense" required>
+                    <input type="text" id="expense" name="expense" required />
                 </fieldset>
 
                 <div class="inputs-row">
@@ -49,22 +52,39 @@
 
                     <fieldset>
                         <legend>Valor da despesa</legend>
-                        <input
-                            type="text"
-                            name="amount"
-                            id="amount"
-                            placeholder="0,00"
-                            required
-                        />
+                        <input type="text" name="amount" id="amount" placeholder="0,00" required />
                     </fieldset>
                 </div>
 
-                button
-
+                <button type="submit">Adicionar despesa</button>
             </form>
-        </section>
-        
-    </main>
 
+            <aside>
+                <header>
+                    <p>
+                        Minha solicitações <i>&bullet;</i>
+                        <span>0 despesas</span>
+                    </p>
+                    <h2><small>R$</small>0,00</h2>
+                </header>
+
+                <ul>
+                    <li class="expense">
+                        <img src="./img/food.svg" alt="Ícone de alimentação" />
+
+                        <div class="expense-info">
+                            <strong>Almoço</strong>
+                            <span>Alimentação</span>
+                        </div>
+
+                        <span class="expense-amount"><small>R$</small>1.420,57</span>
+
+                        <img src="./img/remove.svg" alt="remover" class="remove-icon" />
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </main>
 </body>
+
 </html>
