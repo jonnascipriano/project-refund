@@ -241,6 +241,11 @@ aside ul {
     color: #1f2523;
 }
 
+.expense-info span{
+    font-size: 0.75rem;
+    color: #4d5c57;
+}
+
 .expense-amount {
     font-size: 0.87rem;
     color: #1f2523;
